@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<script src='jquery-2.1.1.min.js'></script>
+<script src='jquery.cookie.js'></script>
+<script src='memo_edit.js'></script>
+<title>メモ編集</title>
+<style>
+	body{
+		width:100%;
+		height:100%;
+	}
+
+	#head_content{
+		width:100%;
+		height:20%;
+	}
+
+	#main_content{
+		width:100%;
+		height:40%;
+	}
+
+	#tail_content{
+		width:100%;
+		height:20%;
+	}
+	
+	#license_content{
+		width:100%;
+		height:20%;
+	}
+</style>
+</head>
+<body>
+	<div id='head_content'>
+		<h1>メモ編集</h1>
+	</div>
+	<div id='main_content'>
+		<h2>日付</h2><br />
+		<label id='update_date'></label><input type='hidden' id='update_id' value='' /><br />
+		<h2>内容</h2>
+		<textarea id='update_content' rows='10'></textarea>
+	</div>
+	<div id='tail_content'>
+		<input type='button' id='update_contentBtn' onclick='update_content()' value='更新' />
+		<input type='button' id='update_reverseBtn' onclick='update_reverse()' value='クリア' />
+		<input type='button' id='update_closeBtn' onclick='update_close()' value='閉じる' />
+	</div>
+	<div id='license_content'>
+		<a href='nikki.zip'>全ソース</a><br />
+		<label>このアプリはMITライセンスで公開しております。改変時はhiro.matsuno at gmail.comにご連絡下さい。atは書き換えてくださいね。</label><br />
+		<a href='http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license'>MITライセンスの全文（日本語訳）</a>
+	</div>
+
+</body>
+</html>

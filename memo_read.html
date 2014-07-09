@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<script src='jquery-2.1.1.min.js'></script>
+<script src='jquery.cookie.js'></script>
+<script src='memo_read.js'></script>
+<title>メモチェック</title>
+<style>
+	body{
+		width:100%;
+		height:100%;
+	}
+
+	#head_content{
+		width:100%;
+		height:20%;
+	}
+
+	#main_content{
+		width:100%;
+		height:40%;
+	}
+
+	#tail_content{
+		width:100%;
+		height:20%;
+	}
+	
+	#license_content{
+		width:100%;
+		height:20%;
+	}
+</style>
+</head>
+<body>
+	<div id='head_content'>
+		<h1>メモチェック</h1>
+	</div>
+	<div id='main_content'>
+		<h2>日付</h2><br />
+		<label id='read_date'></label><input type='hidden' id='read_id' value='' /><br />
+		
+		<h2>内容</h2>
+		<textarea id='read_content' rows="10" readonly='readonly'></textarea>
+	</div>
+	<div id='tail_content'>
+		<input type='button' id='read_editBtn' onclick='read_edit()' value='内容を編集する' />
+		<input type='button' id='read_closeBtn' onclick='read_close()' value='閉じる' />
+	</div>
+	<div id='license_content'>
+		<a href='memo.zip'>全ソース</a><br />
+		<label>このアプリはMITライセンスで公開しております。改変時はhiro.matsuno at gmail.comにご連絡下さい。atは書き換えてくださいね。</label><br />
+		<a href='http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license'>MITライセンスの全文（日本語訳）</a>
+	</div>
+
+</body>
+</html>
